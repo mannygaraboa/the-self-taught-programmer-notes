@@ -12,3 +12,9 @@ print \
 x = 14 / 3
 print (x)
 
+def f(x):
+  return x * 2
+
+result = f(4)
+
+print (f(4))
