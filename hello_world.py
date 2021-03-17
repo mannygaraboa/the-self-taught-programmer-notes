@@ -13,8 +13,12 @@ x = 14 / 3
 print (x)
 
 def f(x):
-  return x * 2
+  return x + 1
 
-result = f(4)
+z = f(5)
 
-print (f(4))
+if z == 5:
+    print("z is 5")
+else:
+    print ("z is not 5")
+
