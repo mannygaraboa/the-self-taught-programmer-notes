@@ -1,24 +1,12 @@
+import math
 
-# print "Hello, World!" 5  times & "montyPython" 3 times.
-for i in range(5) :
-    print ("Hello, World!")
+def even_odd(x):
+    if x % 2 == 0:
+        print ("even")
+    else:
+        print ("odd")
 
-for i in range(3) :
-    print ("montyPython")
+even_odd(2)
+even_odd(3)
 
-print \
-      ("""This is a really really really really long line of code.""")
-
-x = 14 / 3
-print (x)
-
-def f(x):
-  return x + 1
-
-z = f(5)
-
-if z == 5:
-    print("z is 5")
-else:
-    print ("z is not 5")
 
