@@ -1,9 +1,13 @@
 import math
 
-def f(x=2):
-  return x**x
+def two_nums():
+    try:
+        a = input("type a number:")
+        b = input("type another:")
+        a  = int(a)
+        b = int(b)
+        print (a / b)
+    except (ZeroDivisionError, ValueError):
+        print ("Invalid input")
 
-print(f())
-print(f(4))
-
-
+two_nums()

@@ -103,6 +103,7 @@ def even_odd():
 
 even_odd()
 
+
 # ===========================================================================
 # - Required & Optional Parameters - Pg. 56
 # ===========================================================================
@@ -115,3 +116,137 @@ def op_Param(x=2):
 print(op_Param())    # >> 4
 print(op_Param(4))   # >> 256
 
+# Can define a function that has both required & optional parameters.
+# Define all the required parameters first.
+
+def add_it(x, y = 10):
+  return x + y
+
+result = add_it(2)   # >> 12
+print result
+
+
+# ===========================================================================
+# - Scope - Pg. 57
+# ===========================================================================
+
+# Variables have an important property call scope.
+# When you define a variable, its scope refers to what part of your program 
+# can read & write to it.
+
+# Global Scope: It can be read or written to from anywhere in your program.
+# >> Global Variable.
+
+# Local Scope: Your program can only read or write to it in the function (or class)
+# the variable was defined within.
+
+globe1 = 1
+globe2 = 2
+globe3 = 3
+
+def globe():
+  print(globe1)
+  print(globe2)
+  print(globe3)
+
+globe()
+
+def local():
+  local1 = 10
+  local2 = 20
+  local3 = 30
+  print(local1)
+  print(local2)
+  print(local3)
+
+local()
+
+# Writing to a global variable inside of a local scope takes an extra step.
+# Use "global" keyword, followed by the variable you want to change.
+
+control = 100
+
+def change_control():
+  global control
+  control += 1
+  print (control)
+
+change_control() # >> 101
+
+
+# ===========================================================================
+# - Exception Handling - Pg. 61
+# ===========================================================================
+
+# Exception Handling: Allows you to test for error conditions, "catch" exceptions
+# if they occur, and decide how to proceed.
+
+# Keywords "try" & "except"
+  # "try": clause contains the error that could occur.
+  # "except": clause contains code that will only execute if the exception in your 
+  #           "try" clause occurs.
+
+# Each exception in Python is an object
+
+def two_nums1():
+  a = input("type a number:")
+  b = input("type another:")
+  a  = int(a)
+  b = int(b)
+  try:
+    print (a / b)
+  except ZeroDivisionError:
+    print ("b cannot be zero.")
+
+# two_nums1()
+
+# A "ValueError" occurs if you give the built-in functions "int", "string", 
+# or "float" bad input
+
+# "except" statement can have 2 exceptions by adding parentheses around "except" 
+# & separating the exceptions with a comma.
+
+def two_nums2():
+  try:
+    a = input("type a number:")
+    b = input("type another:")
+    a = int(a)
+    b = int(b)
+    print (a / b)
+  except (ZeroDivisionError, ValueError):
+    print ("Invalid input")
+
+# two_nums2()
+
+
+# ===========================================================================
+# - Docstrings - Pg. 64
+# ===========================================================================
+
+# Docstrings: explain what the function does, and document what kinds of parameters
+#             it needs.
+
+def add(x, y):
+  """
+  Returns x + y.
+  :param x: int.
+  :param y: int.
+  :return: int sum of x and y.
+  """
+  return x + y
+
+
+# ===========================================================================
+# - Challenges - Pg. 66
+# ===========================================================================
+
+# 1.) Write a function that takes a number as an input and returns that number squared.
+
+def square_num():
+  x = input("Give number to square: ")
+  x = int(x)
+  print(x**2)
+
+square_num()
+
+# 2.) Create a function that accepts a string as a parameter and prints it.
