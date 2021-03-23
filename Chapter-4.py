@@ -80,23 +80,38 @@ print (float2)
 # "input" collects information from the person using the program.
 # Takes a string as a parameter.
 
-age = input("Enter yout age:")
+age = input("Enter your age:")
 int_age = int(age)
 if int_age < 21:
-    print("You are young!")
+  print("You are young!")
 else:
-    print("Wow, you are old!")
+  print("Wow, you are old!")
 
 
 # ===========================================================================
 # - Reusing Functions - Pg. 54
 # ===========================================================================
 
-def even_odd(x):
-  if x % 2 == 0:
-    print ("even")
+# Function that can be called whenever
+def even_odd():
+  n = input("type a number:")
+  n = int(n)
+  if n % 2 == 0:
+    print ("n is even")
   else:
-    print ("odd")
+    print ("n is odd")
 
-even_odd(2)
-even_odd(3)
+even_odd()
+
+# ===========================================================================
+# - Required & Optional Parameters - Pg. 56
+# ===========================================================================
+
+# Optional parameters: ["function_name"] (["parameter_name"] = ["parameter_value"])
+
+def op_Param(x=2):
+  return x**x
+
+print(op_Param())    # >> 4
+print(op_Param(4))   # >> 256
+

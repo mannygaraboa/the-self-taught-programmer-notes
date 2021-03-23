@@ -1,12 +1,9 @@
 import math
 
-def even_odd(x):
-    if x % 2 == 0:
-        print ("even")
-    else:
-        print ("odd")
+def f(x=2):
+  return x**x
 
-even_odd(2)
-even_odd(3)
+print(f())
+print(f(4))
 
 
