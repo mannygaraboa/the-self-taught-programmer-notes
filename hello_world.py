@@ -1,13 +1,11 @@
 import math
 
-def two_nums():
+def convertFloat():
     try:
-        a = input("type a number:")
-        b = input("type another:")
-        a  = int(a)
-        b = int(b)
-        print (a / b)
-    except (ZeroDivisionError, ValueError):
-        print ("Invalid input")
-
-two_nums()
+        a = input("Type a number: ")
+        a = float(a)
+        print (a)
+    except (ValueError) :
+        print ("Not a number.")
+    
+convertFloat()

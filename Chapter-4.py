@@ -22,9 +22,9 @@ def func1(x):
 z = func1(4)
 
 if z == 5:
-    print("z is 5")
+  print("z is 5")
 else:
-    print ("z is not 5")
+  print ("z is not 5")
 
 # Function without parameters
 def func2():
@@ -40,7 +40,7 @@ def func3(x, y, z):
 sum1 = func3(3, 5, 7)
 print sum1
 
-#Function without a return statement --> returns "None"
+# Function without a return statement --> returns "None"
 # def func4():
 #   zyx = 2 + 2
 
@@ -198,7 +198,7 @@ def two_nums1():
   except ZeroDivisionError:
     print ("b cannot be zero.")
 
-# two_nums1()
+two_nums1()
 
 # A "ValueError" occurs if you give the built-in functions "int", "string", 
 # or "float" bad input
@@ -216,7 +216,7 @@ def two_nums2():
   except (ZeroDivisionError, ValueError):
     print ("Invalid input")
 
-# two_nums2()
+two_nums2()
 
 
 # ===========================================================================
@@ -243,6 +243,11 @@ def add(x, y):
 # 1.) Write a function that takes a number as an input and returns that number squared.
 
 def square_num():
+  """
+  Returns squared input of the user.
+  :input x: int.
+  :print: square of input x.
+  """
   x = input("Give number to square: ")
   x = int(x)
   print(x**2)
@@ -250,3 +255,77 @@ def square_num():
 square_num()
 
 # 2.) Create a function that accepts a string as a parameter and prints it.
+
+def stringParam(string):
+  """
+  Returns string within parameter.
+  :param string: string.
+  :print: string.
+  """
+  print (string)
+
+stringParam("Jello World!")
+
+# 3.) Write a function that takes three required parameters two optional parameters.
+
+def fruitBasket(apple, banana, orange, grape = 2, mango = 3):
+  """
+  Returns 5 integers, last 2 are optional parameters with set values. 
+  :param apple:   int
+  :param banana:  int
+  :param orange:  int
+  :param grape:   int (optional value = 2)
+  :param mango:   int (optional value = 3)
+  :print: prints an object of integers.
+  """
+  print (apple, banana, orange, grape, mango)
+
+fruitBasket(3, 6, 9, 12, 15)
+
+# 4.) Write a program with 2 functions.
+  # 1st function should take an integer as a parameter and return the result of the integer divided by 2.
+  # 2nd function should take an integer as a parameter and return the result of the integer multiplied by 4.
+  # Call the first function, save the result as a variable, and pass it as a parameter to the second function.
+
+def first(x):
+  """
+  Returns integer divided by 2.
+  :param x: int
+  :return: int sum of x divided by 2.
+  """
+  return x / 2
+
+def second(y):
+  """
+  Returns integer multiplied by 4.
+  :param y: int
+  :return: int sum of y multiplied by 4.
+  """
+  return y * 4
+
+firstNum = first(20)
+print (firstNum)
+
+secondNum = second(firstNum)
+print(secondNum)
+
+# 5.) Write a function that converts a string to a "float" and returns the result. Use exception handling to catch the exception that could occur.
+
+def convertFloat():
+  """
+  Returns a float being converted from string, prevents ValueError.
+  :input a: string
+  :float a: float
+  :print: new float
+  If ValueError is presented, print "Not a number".
+  """
+  try:
+    a = input("Type a number: ")
+    a = float(a)
+    print (a)
+  except (ValueError) :
+    print ("Not a number.")
+    
+convertFloat()
+
+# 6.) Add a docstring to all of the functions you wrote in challenges 1-5
