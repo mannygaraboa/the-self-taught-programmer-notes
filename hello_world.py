@@ -1,11 +1,8 @@
 import math
 
-def convertFloat():
-    try:
-        a = input("Type a number: ")
-        a = float(a)
-        print (a)
-    except (ValueError) :
-        print ("Not a number.")
-    
-convertFloat()
+random = []
+random.append(True)
+random.append(100)
+random.append(1.1)
+random.append("Hello")
+print (random)
