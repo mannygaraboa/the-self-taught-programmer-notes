@@ -80,7 +80,7 @@ print (float2)
 # "input" collects information from the person using the program.
 # Takes a string as a parameter.
 
-age = input("Enter your age:")
+age = input("Enter your age: ")
 int_age = int(age)
 if int_age < 21:
   print("You are young!")
@@ -94,7 +94,7 @@ else:
 
 # Function that can be called whenever
 def even_odd():
-  n = input("type a number:")
+  n = input("type a number: ")
   n = int(n)
   if n % 2 == 0:
     print ("n is even")
@@ -189,8 +189,8 @@ change_control() # >> 101
 # Each exception in Python is an object
 
 def two_nums1():
-  a = input("type a number:")
-  b = input("type another:")
+  a = input("type a number: ")
+  b = input("type another: ")
   a  = int(a)
   b = int(b)
   try:
@@ -208,8 +208,8 @@ two_nums1()
 
 def two_nums2():
   try:
-    a = input("type a number:")
-    b = input("type another:")
+    a = input("type a number: ")
+    b = input("type another: ")
     a = int(a)
     b = int(b)
     print (a / b)
