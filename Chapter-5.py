@@ -206,3 +206,171 @@ if n in rhymes:
 else:
     print ("Not found.")
 
+# ===========================================================================
+# - Containers in Containers - Pg. 80
+# ===========================================================================
+
+lists = []
+
+rap = [
+  "Kanye West", 
+  "Jay Z", 
+  "Eminem", 
+  "Nas"
+]
+
+rock = [
+  "Bob Dylan",
+  "The Beatles", 
+  "Led Zeppelin"
+]
+
+djs = [
+  "Zeds Dead",
+  "Tiesto"
+]
+
+lists.append(rap)
+lists.append(rock)
+lists.append(djs)
+
+print (lists)             # >> [['Kanye West', 'Jay Z', 'Eminem', 'Nas'], ['Bob Dylan', 'The Beatles', 'Led Zeppelin'], ['Zeds Dead', 'Tiesto']]
+print (rap)               # >> ['Kanye West', 'Jay Z', 'Eminem', 'Nas']
+
+rap.append("Kendrick Lamar")
+print (lists)             # >> [['Kanye West', 'Jay Z', 'Eminem', 'Nas', 'Kendrick Lamar'], ['Bob Dylan', 'The Beatles', 'Led Zeppelin'], ['Zeds Dead', 'Tiesto']]
+print (rap)               # >> ['Kanye West', 'Jay Z', 'Eminem', 'Nas', 'Kendrick Lamar']
+
+
+# You can store a tuple inside a list, a list inside a tuple, anda dictionary inside a list or tuple:
+
+# tuples inside a list:
+locations = []
+
+la = (34.0522, 188.2437)
+chicago = (41.8781, 87.6298)
+
+locations.append(la)
+locations.append(chicago)
+
+print (locations)         # >> [(34.0522, 188.2437), (41.8781, 87.6298)]
+
+
+# lists inside a tuple
+eights = [
+  "Edgar Allan Poe",
+  "Charles Dickens"
+]
+
+nines = [
+  "Hemingway",
+  "Fitzgerald",
+  "Orwell"
+]
+
+authors = (eights, nines)
+print (authors)           # >> (['Edgar Allan Poe', 'Charles Dickens'], ['Hemingway', 'Fitzgerald', 'Orwell'])
+
+
+# dictionaries inside a list and tuple:
+bday = {
+  "Hemingway" : "7.21.1899",
+  "Fitzgerald" : "9.24.1896"
+}
+
+my_list = [bday]
+my_tuple = (bday,)
+
+print (my_list)           # >> [{'Hemingway': '7.21.1899', 'Fitzgerald': '9.24.1896'}]
+print (my_tuple)          # >> ({'Hemingway': '7.21.1899', 'Fitzgerald': '9.24.1896'},)
+
+
+# A list, tuple, or dictionary can be a value in a dictionary:
+
+ny = {
+  "location" : (40.7128, 74.0059),
+
+  "celebs" : ["W. Allen", "Jay Z", "K. Bacon"],
+
+  "facts" : {
+    "state" : "NY",
+    "country" : "America"
+  }
+}
+
+print (ny["location"])    # >> (40.7128, 74.0059)
+print (ny["celebs"])      # >> ['W. Allen', 'Jay Z', 'K. Bacon']
+print (ny["facts"])       # >> {'state': 'NY', 'country': 'America'}
+
+
+# ===========================================================================
+# - Challenges - Pg. 85
+# ===========================================================================
+
+# 1.) Create a list of your favorite musicians.
+
+fav_musicians = [
+  "Avicii",
+  "Deadmau5",
+  "The Rolling Stones",
+  "Bad Bunny"
+]
+
+# 2.) Create a list of tuples, with each tuple containing the longitude and latitude of somewhere you've lived or visited.
+
+places = []
+
+miami = ("25.7617", "80.1918")
+dc = ("38.9072", "77.0369")
+panama = ("8.5380", "80.7821")
+
+places.append(miami)
+places.append(dc)
+places.append(panama)
+
+print (places[0])
+
+# 3.) Create a dictionary that contains different attributes about you: height, favorite color, favorite author, etc.
+
+my_details = {
+  "Height" : "5 feet 10 inches",
+  "Favorite color" : "Green",
+  "Favorite author" : "Dispenza"
+}
+
+# 4.) Write a program that lets the user ask your height, favorite colors, or favorite author, and returns the result from the dictionary you created in the previous challenge.
+
+my_details = {
+   "Height" : "5 feet 10 inches",
+   "Favorite color" : "Green",
+   "Favorite author" : "Dispenza"
+}
+
+detail = input("Type something about me: ")
+if detail in my_details:
+  print (my_details[detail])
+else:
+  print ("Try Again!")
+
+# 5.) Create a dictionary mapping your favorite musicians to a list of your favorite songs by them.
+
+fav_music = {
+  "Avicii" : ["Levels", "Silhouettes"],
+  "Deadmau5" : ["Ghost n stuff", "Pomegranate"],
+  "The Rolling Stones" : ["Gimme Shelter", "Painted Black"],
+  "Bad Bunny" : ["Yo Perreo Sola", "Callaita"]
+}
+
+print (fav_music["Avicii"])
+
+# 6.) Lists, tuples, and dictionaries are just a few of the containers built into Python. Research Python sets (a type of container). When would you use a set?
+
+# Sets are used to store multiple items in a single variable.
+# Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.
+# A set is a collection which is both unordered and unindexed.
+# Sets are written with curly brackets.
+
+# Would use if wanted to obtain a random order of the list.
+
+thisset = {"Apple", "Banana", "Cherry"}
+print (thisset)
